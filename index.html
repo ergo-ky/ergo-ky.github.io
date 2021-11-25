@@ -8,6 +8,7 @@
 
 	<!-- styles -->
 	<link rel="stylesheet" href="./styles.css">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
 
 </head>
@@ -15,13 +16,26 @@
 	<div class="main-container">
 		<section class="one">
 			<h2 class="artist-statement">
-				Hey, I am a multi-discplinary designer with the aim of crafting surreal experiences.
+				Mixing traditional crafts such as carpentry,
+					gardening, and printmaking with experimental
+						technologies such as augmented reality,
+					decentralized consensus, and virtual assistants. With the wish to thread a continuous
+				intermediary tethered to both worlds.
 			</h2>
 		</section>
-		<section class="gallery-gif">
-			<div class="gallery">
-
-			</div>
+		<section class="gallery-gif" data-flickity='{ "prevNextButtons": false,
+		"pageDots": false,
+		"contain": true,
+		"wrapAround": true,
+		"imagesLoaded": true,
+		"autoPlay": true,
+		"autoPlay": 1000 }'>
+				<img src="img/Solution.png" alt="" srcset="">
+				<img src="/img/avatars auras.svg" alt="" srcset="">
+				<img src="/img/logo.svg" srcset="">
+	
+		</section>
+		<section>
 			<h1 class="tagline">And this is what I do.</h1>
 		</section>
 		<section class="lock-in">
@@ -47,5 +61,25 @@
 			</ul>			
 		</footer>
 	</div>
+
+
+	<!-- javascript scripts -->
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+	<script>
+	//Set up the array of frames
+		var gifImages = ["https://vignette.wikia.nocookie.net/starpolar/images/9/96/Paul_blart.jpg/revision/latest?cb=20150419171412","https://i.ytimg.com/vi/A5KWYdrOXDk/movieposter.jpg","http://content.tv3.ie/content/images/0647/1_165781.jpg","https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Spongebob-squarepants.svg/1200px-Spongebob-squarepants.svg.png","http://i0.kym-cdn.com/entries/icons/mobile/000/016/958/Dankkkk.jpg"];
+
+		var currentFrame = 0; //Call it a frame because we're making a gif and every image (so every array index) will be a frame
+		function changePicture(){
+		    document.getElementById("picture1").src = gifImages[currentFrame]; //Get the gif element and set its source to the current frame
+		    currentFrame++; //Increase the current frame by 1
+		    if(currentFrame >= gifImages.length){ //If we've gone past the end of our array of frames, then:
+			currentFrame = 0; //Reset back to frame 0
+		    }
+		}
+
+		setInterval(changePicture,100);
+	</script>
 </body>
 </html>

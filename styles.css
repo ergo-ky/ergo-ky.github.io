@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif
+;}
+.one{
+	display: flex;
+	width: 85vw;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.artist-statement{
+	font-size: 8vw;
+	margin-left: 2vw;
+}
+.gallery-gif{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+} 
+
+img {
+	width: 100vw;
+	height: auto;
+}
