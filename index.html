@@ -16,14 +16,16 @@
 	<div class="main-container">
 		<section class="one">
 			<h2 class="artist-statement">
-				Mixing traditional crafts such as carpentry,
-					gardening, and printmaking with experimental
-						technologies such as augmented reality,
-					decentralized consensus, and virtual assistants. With the wish to thread a continuous
-				intermediary tethered to both worlds.
+				I am an artist, <br>
+				an illustrator, <br>
+				an animator. <br>
+				I am black. <br>
+				I am queer. <br>
+				My pronouns are she/her. <br>
+				This is how I identify. <br>
 			</h2>
 		</section>
-		<section class="gallery-gif" data-flickity='{ "prevNextButtons": false,
+		<!-- <section class="gallery-gif" data-flickity='{ "prevNextButtons": false,
 		"pageDots": false,
 		"contain": true,
 		"wrapAround": true,
@@ -34,41 +36,44 @@
 				<img src="/img/avatars auras.svg" alt="" srcset="">
 				<img src="/img/logo.svg" srcset="">
 	
-		</section>
-		<section>
-			<h1 class="tagline">And this is what I do.</h1>
-		</section>
-		<section class="lock-in">
-			<div class="gallery close-up">
+		</section> -->
 
-			</div>
-			<h1 class="tagline">Ergo</h1>
-		</section>
-		<section>
-			<h1 class="tagline">Call</h1>
-		</section>
-		<section>
-			<h1 class="tagline">Me</h1>
-		</section>
-		<section>
-			<h1 class="finale">Ky!</h1>
+		<section class="gallery-gif">
+			<img id="picture1" src="img/I.png" alt="Start gif">
 		</section>
 
-		<footer>
+		<section class="two">
+			<h2 class="punchline">
+				And this is what I do, <br>
+				Ergo call me, <br>
+				Ky. <br>
+			</h2>
+			<h2>
+				<li><a href="/porfolio.html">Portfolio</a></li>
+				<li><a href="./about.html">About</a></li>
+			</h2>
+		</section>
+
+
+		<!-- <footer>
 			<ul>
-				<li><a href="./porfolio.html"></a> Portfolio</li>
-				<li><a href="./about.html"></a> About</li>
+				<li><a href="/porfolio.html">Portfolio</a></li>
+				<li><a href="./about.html">About</a></li>
 			</ul>			
-		</footer>
+		</footer> -->
 	</div>
 
 
 	<!-- javascript scripts -->
-	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
 
 	<script>
+	//Initialize GreenSock Scroll Trigger
+	gsap.to(".gallery-gif", {
+
+	})
 	//Set up the array of frames
-		var gifImages = ["https://vignette.wikia.nocookie.net/starpolar/images/9/96/Paul_blart.jpg/revision/latest?cb=20150419171412","https://i.ytimg.com/vi/A5KWYdrOXDk/movieposter.jpg","http://content.tv3.ie/content/images/0647/1_165781.jpg","https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Spongebob-squarepants.svg/1200px-Spongebob-squarepants.svg.png","http://i0.kym-cdn.com/entries/icons/mobile/000/016/958/Dankkkk.jpg"];
+		var gifImages = ["/img/siracha shrimp.png","/img/Solution.png","/img/avatars auras.svg","/img/maiz.png","/img/Peak.png"];
 
 		var currentFrame = 0; //Call it a frame because we're making a gif and every image (so every array index) will be a frame
 		function changePicture(){
@@ -79,7 +84,7 @@
 		    }
 		}
 
-		setInterval(changePicture,100);
+		setInterval(changePicture,850);
 	
 	</script>
 </body>
